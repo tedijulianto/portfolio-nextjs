@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import themeSwitcher from "./hooks/themeSwitcher";
+import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
 import {
   TwitterIcon,
   GithubIcon,
@@ -58,7 +58,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 
 const NavBar = () => {
-  const [mode, setMode] = themeSwitcher();
+  const [mode, setMode] = UseThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
