@@ -54,37 +54,12 @@ const Experience = () => {
         />
         <ul className="flex flex-col items-start justify-between w-full ml-4 xs:ml-2">
           <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="www.google.com"
-            time="2022 - Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Intern"
-            company="Facebook"
-            companyLink="www.facebook.com"
-            time="Summer 2021"
-            address="Menlo Park, CA"
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and mplementing a new user interface and developing the backend infrastructure to support the feature."
-          />
-          <Details
-            position="Software Developer"
-            company="Amazon"
-            companyLink="www.amazon.com"
-            time="Winter 2020"
-            address="Seattle, WA"
-            work="Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability.
-"
-          />
-          <Details
-            position="Software Developer Intern"
-            company="Microsoft"
-            companyLink="www.microsoft.com"
-            time="Spring 2019"
-            address="Redmond, WA"
-            work="Worked on a team responsible for developing new features for Microsoft's Windows operating system, including implementing a new user interface for a system settings panel and optimizing the performance of a core system component."
+            position="Frontend Developer Intern"
+            company=" PT. Teknologi Api Dua Sisi"
+            companyLink="https://twosides.id"
+            time="April 2022 - October 2022"
+            address="Jakarta, Indonesia"
+            work="Created and slicing web design into website. Worked on a team responsible for developing new features and maintenance for website."
           />
         </ul>
       </div>

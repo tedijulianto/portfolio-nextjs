@@ -93,12 +93,11 @@ const NavBar = () => {
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Articles" className="ml-4" />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
-            href="https://twitter.com/"
+            href="https://twitter.com/tedijulianto92"
             target={"_blank"}
             className="w-6 mr-3"
             whileHover={{ y: -2 }}
@@ -107,7 +106,7 @@ const NavBar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/tedijulianto"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -116,7 +115,7 @@ const NavBar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/"
+            href="https://linkedin.com/in/tedijulianto"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -163,17 +162,11 @@ const NavBar = () => {
               className=""
               toggle={handleClick}
             />
-            <CustomMobileLink
-              href="/articles"
-              title="Articles"
-              className=""
-              toggle={handleClick}
-            />
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
-              href="https://twitter.com/"
+              href="https://twitter.com/tedijulianto92"
               target={"_blank"}
               className="w-6 mr-3 sm:mx-1"
               whileHover={{ y: -2 }}
@@ -182,7 +175,7 @@ const NavBar = () => {
               <TwitterIcon />
             </motion.a>
             <motion.a
-              href="https://github.com/"
+              href="https://github.com/tedijulianto"
               target={"_blank"}
               className="w-6 mx-3 rounded-full bg-light dark:bg-dark sm:mx-1"
               whileHover={{ y: -2 }}
@@ -191,7 +184,7 @@ const NavBar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/tedijulianto"
               target={"_blank"}
               className="w-6 mx-3 sm:mx-1"
               whileHover={{ y: -2 }}

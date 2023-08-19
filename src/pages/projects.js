@@ -7,8 +7,8 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import project2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import project3 from "../../public/images/projects/portfolio-cover-image.jpg";
+import project2 from "../../public/images/projects/Zodicon-NFT.png";
+import project3 from "../../public/images/projects/BIG-HEARTS.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
@@ -106,7 +106,7 @@ const Project = ({ title, type, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="text-lg font-semibold underline underline-offset-2 md:text-base"
+            className="text-lg font-semibold underline underline-offset-2 md:text-base hidden"
           >
             Visit
           </Link>
@@ -133,30 +133,30 @@ const projects = () => {
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
-              <FeaturedProject
+              {/* <FeaturedProject
                 title="Crypto Screener Application"
                 img={project1}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
                 link="/"
                 github="/"
                 type="Featured Project"
-              />
+              /> */}
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="NFT With React"
+                title="Zodicon NFT Landing Page"
                 img={project2}
-                link="/"
-                github="/"
+                link="https://github.com/tedijulianto/zodicon"
+                github="https://github.com/tedijulianto/zodicon"
                 type="Project 1"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="React Portfolio Website"
+                title="Bighearts"
                 img={project3}
-                link="/"
-                github="/"
+                link="https://github.com/tedijulianto/bigheart"
+                github="https://github.com/tedijulianto/bigheart"
                 type="Project 2"
               />
             </div>
