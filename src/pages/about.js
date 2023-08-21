@@ -11,7 +11,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
-import { Typewriter } from "react-simple-typewriter";
+import Typewriter from "typewriter-effect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -53,13 +53,11 @@ const about = () => {
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-8 text-center text-7xl sm:text-6xl xs:text-4xl">
               <Typewriter
-                words={["Web Developer", "Frontend Developer"]}
-                loop={5}
-                cursor
-                cursorStyle="|"
-                typeSpeed={90}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                options={{
+                  strings: ["Web Developer", "Frontend Developer"],
+                  autoStart: true,
+                  loop: true,
+                }}
               />
             </div>
 
@@ -92,7 +90,7 @@ const about = () => {
             <div className="col-span-8 flex items-center justify-center gap-5 md:order-3">
               <div className="flex flex-col items-center justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={2} />
+                  <AnimatedNumbers value={3} />
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 md:text-lg sm:text-base xs:text-sm xl:text-center">
                   projects completed

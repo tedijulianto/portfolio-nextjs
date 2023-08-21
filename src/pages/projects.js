@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project1 from "../../public/images/projects/portfolio.png";
 import project2 from "../../public/images/projects/Zodicon-NFT.png";
 import project3 from "../../public/images/projects/BIG-HEARTS.png";
 import TransitionEffect from "@/components/TransitionEffect";
@@ -16,7 +16,7 @@ const FramerImage = motion(Image);
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
     <article className="w-full flex items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
-      <div className="absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+      <div className="absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-[102%] xs:rounded-[1.5rem] 2xl:w-[101.2%]" />
 
       <Link
         href={link}
@@ -70,7 +70,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ title, type, img, link, github }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4">
-      <div className="absolute top-0 -right-3 -z-10 w-[101.5%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101.5%] h-[102%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:w-[102%] xs:h-[102.3%] xs:rounded-[1.5rem]" />
 
       <Link
         href={link}
@@ -133,14 +133,14 @@ const projects = () => {
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
-              {/* <FeaturedProject
-                title="Crypto Screener Application"
+              <FeaturedProject
+                title="Portfolio With Next Js"
                 img={project1}
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                link="/"
-                github="/"
+                summary="A portfolio website create using React, Tailwind CSS, and Next Js."
+                link="https://tedijulianto.vercel.app/"
+                github="https://github.com/tedijulianto/portfolio-nextjs"
                 type="Featured Project"
-              /> */}
+              />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
