@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import UseThemeSwitcher from "@/components/hooks/UseThemeSwitcher";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
@@ -13,17 +14,18 @@ const mont = Montserrat({
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  const [mode, setMode] = UseThemeSwitcher();
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
         className={`${mont.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}
       >
-        <NavBar />
+        <NavBar mode={mode} setMode={setMode} />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>

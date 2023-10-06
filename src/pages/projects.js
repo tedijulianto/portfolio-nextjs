@@ -6,14 +6,23 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import project1 from "../../public/images/projects/portfolio.png";
+import project0 from "../../public/images/projects/portfolio.png";
+import project1 from "../../public/images/projects/portfolio-light.png";
 import project2 from "../../public/images/projects/Zodicon-NFT.png";
 import project3 from "../../public/images/projects/BIG-HEARTS.png";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+const FeaturedProject = ({
+  type,
+  title,
+  summary,
+  img1,
+  img2,
+  link,
+  github,
+}) => {
   return (
     <article className="w-full flex items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="absolute top-0 -right-3 -z-10 w-[100.5%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 sm:h-[102%] xs:w-[102%] xs:rounded-[1.5rem] 2xl:w-[101.2%]" />
@@ -24,11 +33,20 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
-          src={img}
+          src={img1}
           alt={title}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
-          className="w-full h-auto"
+          className="w-full h-auto dark:block hidden"
+          priority={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+        />
+        <FramerImage
+          src={img2}
+          alt={title}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+          className="w-full h-auto block dark:hidden"
           priority={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
@@ -135,7 +153,8 @@ const projects = () => {
             <div className="col-span-12">
               <FeaturedProject
                 title="Portfolio With Next Js"
-                img={project1}
+                img1={project1}
+                img2={project0}
                 summary="A portfolio website create using React, Tailwind CSS, and Next Js."
                 link="https://tedijulianto.vercel.app/"
                 github="https://github.com/tedijulianto/portfolio-nextjs"

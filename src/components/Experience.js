@@ -6,23 +6,12 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
 
   return (
-    <li
-      ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
-    >
+    <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]">
       <LiIcon reference={ref} />
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: "spring" }}
-      >
+      <motion.div initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: "spring" }}>
         <h3 className="font-bold capitalize text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            className="capitalize text-primary dark:text-teal-400"
-          >
+          <a href={companyLink} target="_blank" className="capitalize text-primary dark:text-teal-400">
             @{company}
           </a>
         </h3>
@@ -44,9 +33,7 @@ const Experience = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl sm:text-4xl md:mb-16">
-        Experience
-      </h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl sm:text-4xl md:mb-16">Experience</h2>
       <div ref={ref} className="w-3/4 mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -59,7 +46,7 @@ const Experience = () => {
             companyLink="https://twosides.id"
             time="April 2022 - October 2022"
             address="Jakarta, Indonesia"
-            work="Created and slicing web design into website. Worked on a team responsible for developing new features and maintenance for website."
+            work="Created and converting web design into website. Worked on a team responsible for developing new features and maintenance for website."
           />
         </ul>
       </div>
