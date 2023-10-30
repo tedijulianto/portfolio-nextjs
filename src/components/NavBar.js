@@ -3,13 +3,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import {
-  TwitterIcon,
-  GithubIcon,
-  LinkedInIcon,
-  SunIcon,
-  MoonIcon,
-} from "./Icons";
+import { XTwitterIcon, TwitterIcon, GithubIcon, LinkedInIcon, SunIcon, MoonIcon } from "./Icons";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -65,10 +59,7 @@ const NavBar = ({ mode, setMode }) => {
 
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 xl:px-24 lg:px-16 md:px-12 sm:px-8">
-      <button
-        className="flex-col items-center justify-center hidden lg:flex"
-        onClick={handleClick}
-      >
+      <button className="flex-col items-center justify-center hidden lg:flex" onClick={handleClick}>
         <span
           className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
@@ -101,7 +92,7 @@ const NavBar = ({ mode, setMode }) => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <TwitterIcon />
+            <XTwitterIcon />
           </motion.a>
           <motion.a
             href="https://github.com/tedijulianto"
@@ -142,35 +133,20 @@ const NavBar = ({ mode, setMode }) => {
           className="min-w-[70vw] z-30 flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
           <nav className="flex flex-col items-center justify-center">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="/" title="Home" className="" toggle={handleClick} />
+            <CustomMobileLink href="/about" title="About" className="" toggle={handleClick} />
+            <CustomMobileLink href="/projects" title="Projects" className="" toggle={handleClick} />
           </nav>
 
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
               href="https://twitter.com/tedijulianto92"
               target={"_blank"}
-              className="w-6 mr-3 sm:mx-1"
+              className="w-6 mr-3 sm:mx-1 text-light dark:text-dark"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <TwitterIcon />
+              <XTwitterIcon />
             </motion.a>
             <motion.a
               href="https://github.com/tedijulianto"
